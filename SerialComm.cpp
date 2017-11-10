@@ -1,4 +1,9 @@
-#include "stdafx.h"
+//
+// SerialComm.cpp
+// SerialComm-WinCpp
+//
+// Created by iolate <iolate@me.com> on 2015. 11. 6..
+//
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -65,7 +70,7 @@ HANDLE SerialComm::OpenSerial(int com, int baudrate) {
 	return hSerial;
 }
 
-std::string  SerialComm::ReadSerial(HANDLE hSerial, unsigned byte_read) {
+std::string SerialComm::ReadSerial(HANDLE hSerial, unsigned byte_read) {
 	if (hSerial == NULL) {
 		return "";
 	}
