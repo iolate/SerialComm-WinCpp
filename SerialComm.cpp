@@ -7,7 +7,7 @@
 
 #include "SerialComm.h"
 
-HANDLE SerialComm::_OpenSerial(int com, int baudrate) {
+HANDLE SerialComm::OpenSerial(int com, int baudrate) {
 	HANDLE hSerial;
 	COMMCONFIG dcbSerialParams = { 0 };
 	COMMTIMEOUTS timeouts;// = { 0 };
@@ -65,7 +65,7 @@ HANDLE SerialComm::_OpenSerial(int com, int baudrate) {
 	return hSerial;
 }
 
-std::string  SerialComm::_ReadSerial(HANDLE hSerial, unsigned byte_read) {
+std::string  SerialComm::ReadSerial(HANDLE hSerial, unsigned byte_read) {
 	if (hSerial == NULL) {
 		return "";
 	}
